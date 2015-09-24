@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>お問い合わせ</title>
+<title>川の中の風景</title>
 
 <meta name="viewport" content="width=device-width">
 
@@ -203,30 +203,10 @@ article section figcaption
 
 article section:nth-of-type(odd) figcaption{text-align: right;}
 
-/* フォーム */
-form {max-width:  500px;
-margin: 30px auto;}
+/* ビデオ */
+article {text-align: center;
+margin: 30px 0 100px}
 
-input,textarea  {width: 100%;
-box-sizing: border-box;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-border: solid 1px #aaaaaa;
-border: radius: 0;
--webkit-appearance:none;}
-
-textarea {height: 110px;}
-
-input[type="submit"] {width: 200px;
-background-color: #cef178;}
-
-input:required, input:invalid	{background-image: url(caution.png);
-	background-repeat: no-repeat;
-	background-position: right center}
-
-input:valid {background-image: none}
-
-label span {color: #ff0000}
 
 /* ====== PC用の設定 ====== */
 @media only screen and (min-width:900px) {
@@ -275,6 +255,8 @@ nav ul {font-size: 10px;}
 
 nav ul li a {width: 100px;}
 
+video {width: 480px;
+		height: 270px}
 }
 
 /* ====== スマートフォン用の設定 ====== */
@@ -283,7 +265,7 @@ nav ul li a {width: 100px;}
 div#container {width: 100%;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;}
+	-moz-box-sizing: border-box;
 	padding: 0 10px;
 	background-position: -3px 220px, 100px 280px;}
 header#pageheader img {width: 100%;
@@ -312,6 +294,8 @@ article section:nth-of-type(1n) figure{float: none;
 
 article section:nth-of-type(1n) figcaption{text-align: center;margin-bottom: 15px;}
 
+video {width: 280px;
+		height: 157px}
 }
 
 </style>
@@ -403,45 +387,23 @@ article section figure {margin-left:0;}
 </ul>
 </nav>
 
-<img src="header.jpg" alt="">
+
 </header>
 
 <!-- コンテンツ -->
 <article>
-<header>
-<h1>お問い合わせ</h1>
 
-<p id="summary">ご意見、ご感想などがありましたら、以下の欄にご記入の上、送信してください。また、森の工房やイベントに関するご質問などもお気軽にお寄せください。<br />
-（※送信後はトップページに戻ります。）</p>
-</header>
+<h1>川の中の風景</h1>
 
-<form action="https://www.rescuesolutions.net/form/mail.cgi" method="POST">
-<input type="hidden" name="_uid" value="XXXXXXXX" />
-<input type="hidden" name="_done" value="http://www.www.www/" />
-<input type="hidden" name="_subject" value="FORM MAIL" />
+<video width="640" height="360" controls
+poster="video.jpg">
+<source src="sample.mp4" type="video/mp4">
+<source src="sample.webm" type="video/webm">
 
-<p><label>名前 <span>(必須)</span>:<br>
-<input type="text" name="namae" size="40" required placeholder="名前を入力して下さい">
-</label></p>
+<p>川の中の風景を撮影した動画です。<br>
+<a href="sample.mp4">sample.mp4</a></p>
+</video>
 
-<p><label>メールアドレス <span>(必須)</span>:<br>
-<input type="email" name="mail" size="40" required placeholder="メールアドレスを入力してください"autofocus>
-</label></p>
-
-<p><label>URL:<br>
-<input type="url" name="url" size="40"placeholder="ホームページのURLを入力してください">
-</label></p>
-
-<p>コメント：<br />
-<textarea name="comment" cols="50" rows="8"
-placeholder="コメントなどを入力してください"></textarea>
-</p>
-
-<p id="button">
-<input type="submit" value="送信" />
-</p>
-
-</form>
 </article>
 
 <!-- フッター -->
