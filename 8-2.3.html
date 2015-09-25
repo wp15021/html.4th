@@ -362,8 +362,22 @@ article section	{width: 250px}
 article section figure	{margin-left:0}
 </style>
 <![endif]-->
+
+<script>
+function myimage() {
+var canvas = document.getElementById('circle');
+if(canvas.getContext){
+var ctx =canvas.getContext('2d');
+
+ctx.arc(14,14,14,0,Math.PI*2,true);
+ctx.fillStyle = "#" + Math.floor(Math.random()*256*256*256).toString(16);
+ctx.fill();
+   }
+}
+
+</script>
 </head>
-<body>
+<body onload="myimage();">
 
 <!-- コンテナ -->
 <div id="container">
@@ -372,9 +386,12 @@ article section figure	{margin-left:0}
 <header id="pageheader">
 <hgroup>
 <h1>
+<canvas id="circle" width="28" height="28"></canvas>
+<!--8-2
 <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg">
 <circle cx="14" cy="14" r="14" fill="#880000" />
-</svg>
+</svg> 8-2-->
+
 Green Leaf</h1>
 <h2>生活を楽しくする情報をもっと身近にお届けします</h2>
 </hgroup>
